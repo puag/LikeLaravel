@@ -34,14 +34,14 @@ Composer解决的问题是：
 首先是安装，这里只介绍 Ubuntu 和 Windows 的安装，其他你们应该可以推理出来吧？
 
 #### Ubuntu Composer 安装
-1、切换到安装文件夹（建议安装在 /usr/local/bin 文件夹）
+1、下载并执行 Installer，要注意的是，如果沒有在 php 前面加上 sudo 的话，有可能出现错误信息。
 ```terminal
-cd /usr/local/bin
+sudo curl -sS https://getcomposer.org/installer | sudo php -d detect_unicode=Off
 ```
 
-2、下载并执行 Installer，要注意的是，如果沒有在 php 前面加上 sudo 的话，有可能出现错误信息。
+2、切换到全局安装文件夹
 ```terminal
-sudo curl -s https://getcomposer.org/installer | sudo php
+sudo mv composer.phar /usr/local/bin/composer
 ```
 
 3、更改文件权限：上面的命令完成后，会下载好一个名为 composer.phar 的文件，而这个文件就是 Composer 的本体了，不过要更改一下它的权限。
