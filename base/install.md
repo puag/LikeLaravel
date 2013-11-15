@@ -67,6 +67,8 @@ Composer 装好后，我们就开始装 Laravel 吧！
 1. PHP最低版本： 5.3.7
 2. MCrypt PHP扩展
 
+**注意：请保证你的 PHP 已经打开 openssl，如果不知道是否打开，请到 php.ini 中查看`extension=php_openssl.dll`，并将其前面的`;`去掉。也就是`;extension=php_openssl.dll`改成`extension=php_openssl.dll`**
+
 上面我们已经安装好了 Composer，然后我们打开终端（Win 开打cmd），进入到 PHP 环境目录，运行命令
 ```terminal
 composer create-project laravel/laravel your-project-name
