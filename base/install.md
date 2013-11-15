@@ -1,7 +1,7 @@
 Laravel 安装指南
 =====
 ### Git 介绍
-之所以要说 Git，就是因为 Composre 要用到 Git，Composer 暂且不表，先来了解一下 Git 吧（已经安装的童鞋跳过这里，直接看 [Composer介绍] [7]）
+之所以要说 Git，就是因为 Composre 有时需要用到 Git，还是安装上比较好，Composer 暂且不表，先来了解一下 Git 吧（已经安装的童鞋跳过这里，直接看 [Composer介绍] [7]）
 
 Git 是一个快速、可扩展的分布式版本控制系统。好，介绍就到这里，详细的可以到 [Git 官网] [8] 去了解更多，我们主要讲一下它的安装。这里只以 Ubuntu 和 Windowns 为例，其他你们应该可以推理出来吧？
 #### Ubuntu Git 安装
