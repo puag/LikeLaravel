@@ -9,14 +9,14 @@ Laravel 是一个前沿的PHP框架，多余的就不说了，详细的 Laravel 
 ###目录
 
 #### 基础
-1. [Laravel 安装][3]  
-2. [Laravel 配置][4]
-3. [Laravel 路由][5]
-4. [Laravel 控制器][6]
-5. [Laravel 视图][7]
-6. [Laravel 模型][8]
-7. [Laravel 模板][9]
-7. [Laravel 安装其他包][10]
+1. [Laravel 安装][3] [已完成]
+2. [Laravel 配置][4] [未完成]
+3. [Laravel 路由][5] [未完成]
+4. [Laravel 控制器][6] [未完成]
+5. [Laravel 视图][7] [未完成]
+6. [Laravel 模型][8] [未完成]
+7. [Laravel 模板][9] [未完成]
+7. [Laravel 安装其他包][10] [未完成]
 
 #### 高级教程
 待续………………
