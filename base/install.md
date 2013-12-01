@@ -77,10 +77,46 @@ composer create-project laravel/laravel your-project-name
 ```terminal
 composer create-project laravel/laravel onepiece
 ```
-运行这句代码后，Composer 就开始下载需要的文件了，等运行结束，你会在你的 PHP 环境目录里看到 onepiece 这个文件夹。现在 Laravel 就安装好了，我们可以在浏览器输入
-```browser
-http://127.0.0.1/onepiece/public
+运行这句代码后，Composer 就开始下载需要的文件了，等运行结束，你会在你的 PHP 环境目录里看到 onepiece 这个文件夹，这就安装好了。
+
+#### 另一种安装方式
+有的小盆友说了，大哥，我不是这么弄的，我从 [Laravel 官方的 github 库里] [12] 直接下载的 master 压缩包，肿么不能用啊？
+
+是的，直接下载的 master 压缩包解压后只是 Laravel 的包装文件（暂且这样叫吧），是不能直接运行的，缺少核心文件，这时候我们需要先进入到这个文件夹里。比如我们的文件都拷贝到了 luffy（这是我们自己手动创建的文件夹）这个文件夹里了，那么目绿结构应该是这样的：
+```fiels
+luffy
+  |-- app
+  |-- bootstrap
+  |-- public
+  |-- .gitattributes
+  |-- .gitignore
+  |-- artisan
+  |-- composer.json
+  |-- CONTRIBUTING.md
+  |-- phpunit.xml
+  |-- readme.md
+  |-- server.php
 ```
+好，现在我们从 终端（Windowns是cmd）进入到 luffy 这个文件夹，然后运行
+```terminal
+composer install
+```
+然后你会看到画面卡顿了，这是正常的，一般会等待一会儿（要看你的联网速度了，是外网的速度），再然后就看到开始下载，很激动有木有？等吧，等啊……等啊……等到界面再次停到你的文件夹路径——在这个例子里就是 luffy ——下面，那就是安装好了。
+
+#### 懒人包
+好吧，以上步骤你受到了各种阻力，不能翻墙有木有？虚拟主机不能终端有木有？各种没看懂有木有？
+
+别急，这里给你提供了一个懒人包，是已经将核心文件通过 composer 下载好的压缩包，简单说就是下载后就可以直接用的包（鲜花，掌声，美女……什么？没有美女？T_T……）。
+
+下载地址：  
+[完整包 Github 地址] [13]  
+[直接下载完整包zip] [14]  
+#### 浏览
+现在 Laravel 就安装好了，我们可以在浏览器输入
+```browser
+http://127.0.0.1/项目文件夹名/public
+```
+这里的 **项目文件夹名** 就是我们上面说的 onepiece 、luffy 这种。  
 看到如下画面就是安装成功了
 ![安装成功！] [6]
 
@@ -101,3 +137,6 @@ http://127.0.0.1/onepiece/public
 [9]: http://git-scm.com/download "Git 官网下载页面"
 [10]: http://git-scm.com/download/win "Git 安装程序"
 [11]: git.png "Git 安装界面"
+[12]: https://github.com/laravel/laravel "Laravel 官方的 github 库里"
+[13]: https://github.com/maliang/complete-laravel4 "完整包 Github 地址"
+[14]: https://github.com/maliang/complete-laravel4/archive/master.zip "直接下载完整包zip"
