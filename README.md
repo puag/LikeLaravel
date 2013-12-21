@@ -9,8 +9,8 @@ Laravel 是一个前沿的PHP框架，多余的就不说了，详细的 Laravel 
 ###目录
 
 #### 基础
-1. [Laravel 安装][3] [已完成]
-2. [Laravel 配置][4] [未完成]
+1. [Laravel 安装][3]
+2. [Laravel 配置][4]
 3. [Laravel 路由][5] [未完成]
 4. [Laravel 控制器][6] [未完成]
 5. [Laravel 视图][7] [未完成]

@@ -11,11 +11,11 @@ sudo apt-get install git-core
 ```
 好了，现在我们的 Git 就装好了。
 
-#### Windowns Git 安装
-下载 Windowns 下的 Git 安装包：[官网下载页面] [9] 或者点击 [下载安装文件] [10]，进行安装。  
+#### Windows Git 安装
+下载 Windows 下的 Git 安装包：[官网下载页面] [9] 或者点击 [下载安装文件] [10]，进行安装。  
 安装过程中其他不用管，只是到了下面这幅界面的时候，记得选择第二项，此项会将 Git 添加到 Windows 的环境变量，并且有专门的执行文件，可以解决因 Git 添加到环境变量而产生的冲突。**总之一句话，选第二个就对了**  
 ![Git 安装界面] [11]  
-这样 Windowns 下的 Git 就安装好了。下面介绍 Composer。
+这样 Windows 下的 Git 就安装好了。下面介绍 Composer。
 
 ### Composer 介绍
 很多童鞋很奇怪，为什么要讲 Composer ？
@@ -54,8 +54,8 @@ sudo chmod a+x composer.phar
 sudo composer self-update
 ```
 
-#### Windowns Composer 安装
-1、下载 Windowns 下的 Composer 安装包：[官网下载页面] [4] 或者点击 [下载安装文件] [5]，进行安装。  
+#### Windows Composer 安装
+1、下载 Windows 下的 Composer 安装包：[官网下载页面] [4] 或者点击 [下载安装文件] [5]，进行安装。  
 2、然后，就没然后了，你已经装好了。Composer 自身需要升级版本的时候你只需要在命令行（运行：cmd）输入
 ```terminal
 composer self-update
@@ -97,7 +97,7 @@ luffy
   |-- readme.md
   |-- server.php
 ```
-好，现在我们从 终端（Windowns是cmd）进入到 luffy 这个文件夹，然后运行
+好，现在我们从 终端（Windows 是 cmd）进入到 luffy 这个文件夹，然后运行
 ```terminal
 composer install
 ```
