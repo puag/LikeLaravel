@@ -13,14 +13,14 @@ sudo apt-get install git-core
 
 #### Windows Git 安装
 下载 Windows 下的 Git 安装包：[官网下载页面] [9] 或者点击 [下载安装文件] [10]，进行安装。  
-安装过程中其他不用管，只是到了下面这幅界面的时候，记得选择第二项，此项会将 Git 添加到 Windows 的环境变量，并且有专门的执行文件，可以解决因 Git 添加到环境变量而产生的冲突。**总之一句话，选第二个就对了**  
+安装过程中其他不用管，只是到了下面这幅界面的时候，记得选择第二项，此项会将 Git 添加到 Windows 的环境变量，并且有专门的执行文件，可以解决因 Git 添加到环境变量而与其他软件的环境变量产生的冲突。**总之一句话，选第二个就对了**  
 ![Git 安装界面] [11]  
 这样 Windows 下的 Git 就安装好了。下面介绍 Composer。
 
 ### Composer 介绍
 很多童鞋很奇怪，为什么要讲 Composer ？
 
-恩，因为我们这里介绍的是 Laravel4，早在 Laravel3 的时候还是不用的 Composer 的。那么 Composer 是神马呢？简单的说 Composer 就是一个 PHP 的组件包的依赖管理器。早年间 PHP 其实是有自己的包管理器的，叫 PEAR。PEAR 就介绍到这里，你只要知道这是一个狗屎一般的管理器就行了。在 Node 的 npm 和 Ruby 的 bundler 都如火如荼的时候，连 Python 都有了好基友 easy_iinstall 和 pip，PHP也坐不住了，几个非官方的小伙伴一咬牙一跺脚，于是就有了 Composer。Composer 已经得到越来越多的 PHP 框架支持，基本就是你的 PHP 框架如果不支持 Composer，你都不好意思和同行打招呼。
+恩，从 Laravel4 开始，composer 成为了 laravel 的组件包管理方式，早在 Laravel3 的时候还是不用 Composer 的。那么 Composer 是神马呢？简单的说 Composer 就是一个 PHP 的组件包的依赖管理器。早年间 PHP 其实是有自己的包管理器的，叫 PEAR。PEAR 就介绍到这里，你只要知道这是一个狗屎一般的管理器就行了。在 Node 的 npm 和 Ruby 的 bundler 都如火如荼的时候，连 Python 都有了好基友 easy_iinstall 和 pip，PHP也坐不住了，几个非官方的小伙伴一咬牙一跺脚，于是就有了 Composer。Composer 已经得到越来越多的 PHP 框架支持，基本就是你的 PHP 框架如果不支持 Composer，你都不好意思和同行打招呼。
 
 Composer解决的问题是：
 
@@ -29,7 +29,7 @@ Composer解决的问题是：
 3. 你声明你所依赖的库。
 4. Composer找出哪些包的哪个版本将会被安装，然后安装它们（也就是把它们下载到你的项目中）。
 
-下面就是小白使用流程，更多关于 Composer 的内容，请到 [Composer官网] [3]
+下面就是小白使用流程，更多关于 Composer 的内容，请到 [Composer官网] [3] 或 [Composer中文网] [15] 查看
 
 首先是安装，这里只介绍 Ubuntu 和 Windows 的安装，其他你们应该可以推理出来吧？
 
@@ -62,20 +62,23 @@ composer self-update
 ```
 Composer 装好后，我们就开始装 Laravel 吧！
 
-### Laravel 安装
+### Laravel 5.1 安装
 #### 最低要求（注意 PHP 版本）
-1. PHP最低版本： 5.3.7
-2. MCrypt PHP扩展
+1.PHP >= 5.5.9  
+2.OpenSSL PHP 扩展  
+3.PDO PHP 扩展  
+4.Mbstring PHP 扩展  
+5.Tokenizer PHP 扩展  
 
 **注意：请保证你的 PHP 已经打开 openssl，如果不知道是否打开，请到 php.ini 中查看`extension=php_openssl.dll`，并将其前面的`;`去掉。也就是`;extension=php_openssl.dll`改成`extension=php_openssl.dll`**
 
 上面我们已经安装好了 Composer，然后我们打开终端（Win 开打cmd），进入到 PHP 环境目录，运行命令
 ```terminal
-composer create-project laravel/laravel your-project-name
+composer create-project laravel/laravel your-project-name --prefer-dist
 ```
 面对这一串命令不要害怕，你只要修改`your-project-name`就行了，它代表你要安装 Laravel 的文件名。比如我有个项目叫 onepiece，那么上面的命令就是
 ```terminal
-composer create-project laravel/laravel onepiece
+composer create-project laravel/laravel onepiece --prefer-dist
 ```
 运行这句代码后，Composer 就开始下载需要的文件了，等运行结束，你会在你的 PHP 环境目录里看到 onepiece 这个文件夹，这就安装好了。
 
@@ -87,12 +90,20 @@ composer create-project laravel/laravel onepiece
 luffy
   |-- app
   |-- bootstrap
+  |-- config
+  |-- database
   |-- public
+  |-- resources
+  |-- storage
+  |-- tests
+  |-- .env.example
   |-- .gitattributes
   |-- .gitignore
   |-- artisan
   |-- composer.json
-  |-- CONTRIBUTING.md
+  |-- gulpfile.js
+  |-- package.json
+  |-- phpspec.yml
   |-- phpunit.xml
   |-- readme.md
   |-- server.php
@@ -138,5 +149,6 @@ http://127.0.0.1/项目文件夹名/public
 [10]: http://git-scm.com/download/win "Git 安装程序"
 [11]: git.png "Git 安装界面"
 [12]: https://github.com/laravel/laravel "Laravel 官方的 github 库里"
-[13]: https://github.com/maliang/complete-laravel4 "完整包 Github 地址"
-[14]: https://github.com/maliang/complete-laravel4/archive/master.zip "直接下载完整包zip"
+[13]: https://github.com/overtrue/latest-laravel "完整包 Github 地址"
+[14]: https://github.com/overtrue/latest-laravel/blob/master/laravel-master.tar.gz?raw=true "直接下载完整包zip"
+[15]: http://www.phpcomposer.com/ "Composer中文网"
